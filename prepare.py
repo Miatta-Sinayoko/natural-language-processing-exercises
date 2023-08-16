@@ -117,23 +117,6 @@ def remove_stopwords(text, extra_words=None, exclude_words=None):
     
     return filtered_text
 
-# def add_cleaned_columns(df, column):
-#     """Add cleaned and processed columns to the input DataFrame.
-    
-#     This function adds cleaned and processed columns to the input DataFrame.
-    
-#     Parameters:
-#     - df: DataFrame containing the text data.
-#     - column: Name of the column containing the text to be processed.
-    
-#     Returns:
-#     DataFrame with added 'clean', 'stemmed', and 'lemmatized' columns.
-#     """
-#     df['clean'] = df[column].apply(lambda x: remove_stopwords(stem(basic_clean(' '.join(tokenize(x))))))
-#     df['stemmed'] = df['clean'].apply(stem)
-#     df['lemmatized'] = df['clean'].apply(lemmatize)
-#     return df
-
 def add_cleaned_columns(df, column):
     """
     Add cleaned and processed columns to the input DataFrame.
